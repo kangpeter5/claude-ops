@@ -1,0 +1,14 @@
+{
+  "name": "delivery-loop",
+  "displayName": "Delivery Loop",
+  "version": "0.1.0",
+  "description": "Linear ticket delivery loop: PRD intake, implement with self-review, PR review, review follow-up, release notes. Deploy stays human.",
+  "author": {
+    "name": "Pete Kang",
+    "url": "https://github.com/kangpeter5"
+  },
+  "homepage": "https://github.com/kangpeter5/claude-ops#readme",
+  "repository": "https://github.com/kangpeter5/claude-ops",
+  "license": "MIT",
+  "keywords": ["linear", "notion", "slack", "github", "code-review", "scheduled-tasks", "workflow"]
+}

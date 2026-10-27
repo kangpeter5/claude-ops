@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "claude-ops",
+  "description": "Claude Code plugin that works Linear tickets end to end: PRD intake, implementation with self-review, PR review, review follow-up, and release notes. Deploy stays human.",
+  "owner": {
+    "name": "Pete Kang",
+    "url": "https://github.com/kangpeter5"
+  },
+  "plugins": [
+    {
+      "name": "delivery-loop",
+      "source": "./plugin",
+      "description": "Linear ticket delivery loop for Claude Code: intake, implement-ticket, address-review, release, next-ticket skills plus restricted subagents and a deploy guard hook.",
+      "category": "workflow",
+      "tags": [
+        "linear",
+        "notion",
+        "slack",
+        "github",
+        "pull-requests",
+        "code-review",
+        "scheduled-tasks"
+      ]
+    }
+  ]
+}

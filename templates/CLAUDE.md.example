@@ -1,0 +1,33 @@
+# <Repo name>
+
+<One paragraph: what this service/app is and who uses it.>
+
+## Commands
+- Install: `<npm ci | pip install -e .[dev] | ...>`
+- Test: `<npm test | pytest | ...>`  (run this before every commit)
+- Lint: `<npm run lint | ruff check . | ...>`
+- Type check: `<tsc --noEmit | mypy | none>`
+- Build: `<npm run build | none>`
+
+## Linear
+- team: <KEY>            # e.g. BE. Used by /next-ticket and /intake when no --team is given.
+- project: <optional default project name>
+
+## Branches and PRs
+- Branch: `claude/<LINEAR-KEY>-<slug>` for agent work. Never commit to `main`.
+- PR title: `<LINEAR-KEY>: <title>`. Body: acceptance-criteria checklist, how to verify, `Closes <issue url>`.
+- Reviewers: <GitHub handles or "CODEOWNERS">
+- Agents never merge, never force-push, never resolve review threads.
+
+## Sensitive paths (reviewer treats changes here as high severity)
+- <auth/, payments/, infra/, migrations/>
+
+## Deploy
+- Deploys happen in CD after merge. Production requires a human approval in the `production` environment.
+- Agents do not run deploy commands. The denied commands are in `.claude/settings.json`.
+- Release channel (Slack): `#<channel>`
+- Changelog file: <CHANGELOG.md | none>
+- Watch after deploy: <dashboard or log query>
+
+## Conventions
+- <Error handling, logging, naming, test layout. Keep to what a new engineer needs on day one.>
