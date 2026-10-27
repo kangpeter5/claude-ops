@@ -9,9 +9,9 @@
 #   https://code.claude.com/docs/en/cloud-environments#what-carries-over-from-your-setup
 #
 # Usage (run from the root of the target repository):
-#   curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- [--ref v0.1.0]
+#   curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- [--ref 0.1.0]
 # or, with a local clone of claude-ops:
-#   /path/to/claude-ops/scripts/install.sh [--ref v0.1.0] [--source /path/to/claude-ops]
+#   /path/to/claude-ops/scripts/install.sh [--ref 0.1.0] [--source /path/to/claude-ops]
 #
 # Re-run to update. The script only writes under .claude/ and prints the
 # settings.json snippet to merge when a settings file already exists.

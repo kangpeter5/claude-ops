@@ -41,7 +41,7 @@ Plus branch protection and a production environment with a required reviewer, wh
 From the root of the target repository:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- --ref v0.1.0
+curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- --ref 0.1.0
 ```
 
 Then edit `CLAUDE.md`, commit `.claude/` and `CLAUDE.md`, and create the three scheduled tasks from [`routines/`](routines/). The whole path is in [docs/getting-started.md](docs/getting-started.md).

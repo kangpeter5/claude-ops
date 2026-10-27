@@ -18,4 +18,4 @@ Open a GitHub issue with the label `security`, or email the maintainer listed in
 
 ## Supply chain
 
-Pin the installer to a tag (`--ref v0.1.0`) and pin the marketplace plugin to a version. Review the diff of `plugin/` before updating a vendored copy; the installer prints the commit it installed into `.claude/claude-ops.lock`.
+Pin the installer to a tag (`--ref 0.1.0`) and pin the marketplace plugin to a version. Review the diff of `plugin/` before updating a vendored copy; the installer prints the commit it installed into `.claude/claude-ops.lock`.

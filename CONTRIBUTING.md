@@ -19,4 +19,4 @@ Then run the installer against a scratch repo and start a local session there to
 - Skills carry `disable-model-invocation: true`. They run when a person or a scheduled-task prompt invokes them, never because Claude felt like it.
 - Subagents declare `tools` allowlists. Add a tool only with a sentence in the PR explaining why.
 - The guard hook's default patterns stay conservative. Project-specific commands go in `CLAUDE_OPS_DENY_PATTERNS`.
-- Update `CHANGELOG.md` and bump `plugin/.claude-plugin/plugin.json` `version` in the same PR.
+- Update `CHANGELOG.md` and bump `plugin/.claude-plugin/plugin.json` `version` in the same PR. Release tags carry no `v` prefix: `0.1.0`, `0.2.0`.

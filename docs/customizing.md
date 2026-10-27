@@ -27,7 +27,7 @@ Repeat the installer, fill in that repo's `CLAUDE.md`, create its three schedule
 ## Updating
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- --ref v0.2.0
+curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- --ref 0.2.0
 git diff .claude/
 ```
 

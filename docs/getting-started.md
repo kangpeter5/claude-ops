@@ -14,7 +14,7 @@ About 15 minutes for the first repository, under 10 for each one after.
 From the repo root, on a new branch:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- --ref v0.1.0
+curl -fsSL https://raw.githubusercontent.com/kangpeter5/claude-ops/main/scripts/install.sh | bash -s -- --ref 0.1.0
 ```
 
 This writes `.claude/skills/*`, `.claude/agents/*`, `.claude/hooks/claude-ops/guard.sh`, `.claude/claude-ops.lock`, and creates `CLAUDE.md` and `.claude/settings.json` if they don't exist. If they do exist, it prints what to merge.
