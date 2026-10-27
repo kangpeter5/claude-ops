@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment": "Copy of settings/recommended.json plus the keys you usually add per repo. Trim to taste.",
+  "permissions": {
+    "allow": [
+      "Bash(npm test *)",
+      "Bash(npm run lint *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)"
+    ],
+    "deny": [
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git push * --force *)",
+      "Bash(git push * -f *)",
+      "Bash(git push --force-with-lease *)",
+      "Bash(gh pr merge *)",
+      "Bash(gh workflow run *)",
+      "Bash(gh release create *)",
+      "Bash(kubectl apply *)",
+      "Bash(kubectl delete *)",
+      "Bash(kubectl rollout *)",
+      "Bash(helm install *)",
+      "Bash(helm upgrade *)",
+      "Bash(terraform apply *)",
+      "Bash(terraform destroy *)",
+      "Bash(pulumi up *)",
+      "Bash(vercel --prod *)",
+      "Bash(flyctl deploy *)",
+      "Bash(fly deploy *)",
+      "Bash(serverless deploy *)",
+      "Bash(sls deploy *)",
+      "Bash(docker push *)",
+      "Bash(<your-deploy-cli> *)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/*.pem)",
+      "Read(./**/id_rsa*)"
+    ]
+  },
+  "env": {
+    "CLAUDE_OPS_DENY_PATTERNS": "<your-deploy-cli>|<another pattern>"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PROJECT_DIR}\"/.claude/hooks/claude-ops/guard.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

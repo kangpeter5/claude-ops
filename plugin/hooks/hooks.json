@@ -1,0 +1,17 @@
+{
+  "description": "Deny deploy, force-push and merge commands at the tool boundary. Belt and braces for the permissions.deny rules in settings/recommended.json.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/guard.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
